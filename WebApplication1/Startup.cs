@@ -9,7 +9,7 @@ namespace WebApplication1
     {
         public void Configuration(IAppBuilder app)
         {
-            ConfigureAuth(app)
+            ConfigureAuth(app);
             Debug.WriteLine("Test commit3");
         }
     }
