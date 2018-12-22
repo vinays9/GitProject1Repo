@@ -11,7 +11,7 @@ pipeline{
 			steps{
 				timeout(time:2, unit:'DAYS')
 				{
-					input message: 'Can you approve this ??', submitter: 'alice'
+					input message: 'Can you approve this ??', submitter: 'vinay'
 				}
 			}
 		}
