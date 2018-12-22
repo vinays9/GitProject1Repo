@@ -8,9 +8,11 @@ pipeline{
         }
 		stage('Approve?')
 		{
-			timeout(time:2, unit:'DAYS')
-			{
-				input message: 'Can you approve this ??', submitter: 'alice'
+			steps{
+				timeout(time:2, unit:'DAYS')
+				{
+					input message: 'Can you approve this ??', submitter: 'alice'
+				}
 			}
 		}
         stage('Deploy to Testing server'){
