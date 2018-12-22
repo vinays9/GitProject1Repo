@@ -1,12 +1,12 @@
 pipeline{
     agent any
     stages{
-        stage('Deploy to Development server'){
+        stage('Deploying to Development server'){
             steps{
                build 'WebApplication1-Develop'
             }
         }
-		stage('Approve?')
+		stage('Approve to deploy to Testing server?')
 		{
 			steps{
 				timeout(time:2, unit:'DAYS')
@@ -15,12 +15,12 @@ pipeline{
 				}
 			}
 		}
-        stage('Deploy to Testing server'){
+        stage('Deploying to Testing server'){
             steps{
                build 'WebApplication-Stage'
             }
         }
-		stage('Approve?')
+		stage('Approve to deploy to Production server?')
 		{
 			steps{
 				timeout(time:2, unit:'DAYS')
@@ -29,7 +29,7 @@ pipeline{
 				}
 			}
 		}
-        stage('Deploy to Production server'){
+        stage('Deploying to Production server'){
             steps{
                build 'WebApplication1-Prod'
             }
